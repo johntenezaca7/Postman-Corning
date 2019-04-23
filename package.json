@@ -1,0 +1,19 @@
+{
+  "name": "postman-corning",
+  "version": "1.0.0",
+  "description": "Using Jenkins & Postman's Newman to create a monitor system for testing",
+  "main": "index.js",
+  "scripts": {
+    "api_tests": "node index"
+  },
+  "keywords": [
+    "Jenkins",
+    "Postman",
+    "Newman"
+  ],
+  "author": "John T",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^4.4.1"
+  }
+}
