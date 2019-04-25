@@ -1,10 +1,9 @@
-var newman = require('newman');
-var NAME = 'CORNING ENDPOINT'
+const newman = require('newman');
+const NAME = 'CORNING ENDPOINT';
 
 newman.run({
     collection: 'https://www.getpostman.com/collections/07f9c25f7df2188715bb',
-    reporters: ['cli', 'htmlextra'],
-    color: 'on'
+    reporters: ['cli', 'htmlextra']
   })
   .on('start', 
     function (err, args) { 
