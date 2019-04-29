@@ -3,9 +3,7 @@ const NAME = 'CORNING ENDPOINT';
 
 newman.run({
     collection: 'https://www.getpostman.com/collections/07f9c25f7df2188715bb',
-    reporters: ['cli'],
-    bail: true,
-    timeoutRequest: 10000
+    reporters: ['cli', 'htmlextra'],
   })
   .on('start', function (err, args) { 
     console.log(`Running a collection for ${ NAME }.`);
@@ -16,7 +14,7 @@ newman.run({
     
     const collatedErrors = [err, summary.error, executions.requestError, failures].filter(error => error);
 
-    if ( collatedErrors.length ) {
+    if ( err ) {
       collatedErrors.forEach(err => {
         console.error(`Collection run encountered ERRORs: ${ JSON.stringify(err) }.`);
       })
