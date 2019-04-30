@@ -4,6 +4,7 @@ const NAME = 'CORNING ENDPOINT';
 newman.run({
     collection: 'https://www.getpostman.com/collections/07f9c25f7df2188715bb',
     reporters: ['cli', 'htmlextra'],
+    iterationCount: 10
   })
   .on('start', function (err, args) { 
     console.log(`Running a collection for ${ NAME }.`);
